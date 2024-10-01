@@ -3,10 +3,6 @@
 @REM Set up the Developer Command Prompt environment for 64-bit
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
 
-@REM Activate Anaconda Environment
-echo Activating Anaconda Environment
-call conda activate %ENV_NAME%
-
 @REM Install Python packages
 echo Installing Python packages
 call pip install pandas
