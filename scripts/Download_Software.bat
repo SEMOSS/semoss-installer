@@ -1,6 +1,9 @@
 @echo off
 Setlocal EnableDelayedExpansion
 
+:: Downloads and unzips Tomcat
+start "Tomcat Download" /MIN ".\downloadScripts\tomcat.bat"
+
 :: Downloads files
 if %softawareInstall%==true (
 
@@ -31,9 +34,6 @@ if %softawareInstall%==true (
         start "Maven Download" /MIN ".\downloadScripts\maven.bat"
     )
 )
-
-:: Downloads and unzips Tomcat
-start "Tomcat Download" /MIN ".\downloadScripts\tomcat.bat"
 
 if %eclipseLoc% == null (
     echo Failed to open eclipse.
