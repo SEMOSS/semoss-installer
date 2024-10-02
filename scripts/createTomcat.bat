@@ -75,8 +75,6 @@ if exist "%xmlFile%" (
     pause
     exit /b 1
 )
-
-
 ::------------------- CREATE FOLDER "Server" -------------------
 set serversFolder=%workspacePath%\Servers
 if not exist "%serversFolder%" (
@@ -85,7 +83,6 @@ if not exist "%serversFolder%" (
 ) else (
     echo Servers folder already exists at %serversFolder%.
 )
-
 ::------------------- CREATE FILE ".project" -------------------
 set project_file=%workspacePath%\Servers\.project
 :: Create the XML file and write the content
@@ -161,7 +158,7 @@ if not exist "%semoss_subfolder_Path%" (
     echo Subfolder already exists at %semoss_subfolder_Path%.
 )
 ::------------------- COPY 37.tree file IN METADATA -------------------
-set copy_root=%sourceFolder%\scripts\BuildFilesDirectory\37.tree
+set copy_root=%dir%\scripts\BuildFilesDirectory\37.tree
 set rootfolder_Path=%workspacePath%\.metadata\.plugins\org.eclipse.core.resources\.root
 if exist "%projectfolder_Path%" (
     copy "%copy_root%" "%rootfolder_Path%" /Y
@@ -171,7 +168,7 @@ if exist "%projectfolder_Path%" (
 )
 
 ::------------------- COPY org.eclipse.core.resources file IN METADATA -------------------
-set copy_safetable=%sourceFolder%\scripts\BuildFilesDirectory\org.eclipse.core.resources
+set copy_safetable=%dir%\scripts\BuildFilesDirectory\org.eclipse.core.resources
 set safetable_Path=%workspacePath%\.metadata\.plugins\org.eclipse.core.resources\.safetable
 if exist "%safetable_Path%" (
     copy "%copy_safetable%" "%safetable_Path%" /Y
@@ -260,7 +257,7 @@ if exist "%server_settings2%" (
 set "catalina_policy=%workspacePath%\%Tomcat_Version%\conf\catalina.policy"
 set "catalina_properties=%workspacePath%\%Tomcat_Version%\conf\catalina.properties"
 set "context_file=%workspacePath%\%Tomcat_Version%\conf\context.xml"
-set "server_file=%sourceFolder%\scripts\BuildFilesDirectory\server.xml"
+set "server_file=%dir%\scripts\BuildFilesDirectory\server.xml"
 set "tomcat_usersFile=%workspacePath%\%Tomcat_Version%\conf\tomcat-users.xml"
 set "web_file=%workspacePath%\%Tomcat_Version%\conf\web.xml"
 
