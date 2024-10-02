@@ -12,15 +12,32 @@ First things first, we need you to download a Java SE Development Kit (JDK). Thr
  
 ## Properties File 
  
-For our automation to know exactly what you want to download and where you want to download it to, we need you to edit the properties file. This file is called `master.properties`. The purpose of this file is to flag certain software as true or false. A true marker means that the software will be installed, false means that it won’t be installed. The individual software flags only work if _**softwareInstall**_ is true. Someone that has never downloaded any aspects of SEMOSS before would have a properties file that looks similar to this:
+For our automation to know exactly what you want to download and where you want to download it to, we need you to edit the properties file. This file is called `master.properties`. The purpose of this file is to flag certain software as true or false. A true marker means that the software will be installed, false means that it won’t be installed. The individual software flags only work if _**softwareInstall**_ is true. 
+### Workspace Path
+For a first time SEMOSS installer, you are going to need to make some changes to the properties file. you can also choose to set your path variable. This is where your workspace within Eclipse would be located. First time installers usually want their workspace in their C drive. We recommend it to look like this: 
 
----screenshot of master.properties where all flags are set to the values are set for a first time download --------
+![image](https://github.com/user-attachments/assets/9a7d394a-40f6-4f9c-8ced-eabef0972045)
 
-Notice how you can also choose to set your path variable. This is where your workspace within Eclipse would be located. First time installers usually want their workspace in their C drive, like so: 
+The script will automatically make your workspace for you once you fill in this value. If you are creating a different workspace to play around in, pick whatever path you’d like. 
 
----screenshot of master.properties where the workspace/ path variable/ eclipse are set for first timers --------
+### EclipseLoc
 
-But if you are creating a different workspace to play around in, pick whatever path you’d like. A returning user would potentially set some installation values to false, if they already exist on your machine.
+If you are a first time installer, leave eclipseLoc **set to null**. This allows the script to populate the properties file with the correct location as you download Eclipse. You do not need to change anything here.
+
+![image](https://github.com/user-attachments/assets/02c799a8-b458-4a25-a850-a605f1a2b39d)
+
+If you already have the correct version of Eclipse on your machine and are running the automation part, you will need to populate this field as the comment instructs. Here is an example of what that may look like, depending on where Eclipse is downloaded on your machine: 
+
+![image](https://github.com/user-attachments/assets/41d51762-0886-44cd-b6bf-134d2c8314a1)
+
+### Setting Your Flags
+
+As a first time SEMOSS installer, you will need to install all the bells and whistles. All of your flags should be set to "true". See the image below and ensure that your properties file matches it. 
+
+![image](https://github.com/user-attachments/assets/e9bf8464-6707-4a0e-9b23-8c4fcaec0bb4)
+
+Returning SEMOSS installers have the option to play around with these flags. If you already have the correct versions of software on your machine, you may set the "softwareInstall" flag to false. If you need a few to be updated, set it to true and further specify which software you need. 
+
 
 ## VS Installer
 
