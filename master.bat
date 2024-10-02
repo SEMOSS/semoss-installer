@@ -14,7 +14,7 @@ if not exist "%workspacePath%" mkdir "%workspacePath%"
 start "Settings.bat" /d ".\scripts" /MIN "Settings.bat"
 start "VS_Install.bat" /d ".\scripts" "VSInstall.bat"
 start "Download_Software.bat" /d ".\scripts" "Download_Software.bat"
-start "clone.bat" /d ".\scripts" /MIN "clone.bat"
+start "clone.bat" /d ".\scripts" /B /W "clone.bat"
 call .\scripts\classpath.bat
 
 pause
@@ -42,7 +42,6 @@ pause
 if %rInstall%==true (
     call .\scripts\R_Install.bat
 )
-@REM call anaconda.bat
 
 pause
 

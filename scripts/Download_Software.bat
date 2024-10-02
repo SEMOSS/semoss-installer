@@ -32,20 +32,19 @@ if %softawareInstall%==true (
     )
 )
 
-if %eclipseLoc% neq null (
-    start %eclipseLoc%\eclipse.exe -data %workspacePath%
-    pause
-) else (
+:: Downloads and unzips Tomcat
+start "Tomcat Download" /MIN ".\downloadScripts\tomcat.bat"
+
+if %eclipseLoc% == null (
     echo Failed to open eclipse.
     echo The eclipse path variable, eclipseLoc, was not specified in the properties file.
     echo Enter the directory that contains the file eclipse.exe
-    set /p "eclipseLoc=path:"
-
-    start !eclipseLoc!\eclipse.exe -data %workspacePath%
-    pause
+    set /p "eclipseLoc=Path:"
 )
 
-:: Downloads and unzips Tomcat
-start "Tomcat Download" /MIN ".\downloadScripts\tomcat.bat"
+start %eclipseLoc%\eclipse.exe -data %workspacePath%
+timeout /t 60 /nobreak
+echo Attempting to close Eclipse...
+taskkill /IM eclipse.exe /F
 
 exit

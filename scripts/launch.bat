@@ -2,18 +2,14 @@
 Setlocal EnableDelayedExpansion
 
 :: Launch eclipse
-if %eclipseLoc% neq null (
-    start %eclipseLoc%\eclipse.exe -data %workspacePath%
-    pause
-) else (
+if %eclipseLoc% == null (
     echo Failed to open eclipse.
     echo The eclipse path variable, eclipseLoc, was not specified in the properties file.
     echo Enter the directory that contains the file eclipse.exe
-    set /p "eclipseLoc=path:"
-
-    start !eclipseLoc!\eclipse.exe -data %workspacePath%
-    pause
+    set /p "eclipseLoc=Path:"
 )
+
+start %eclipseLoc%\eclipse.exe -data %workspacePath%
 
 :: Start server
 echo server starts successfully, but that isn't reflected in eclipse.
