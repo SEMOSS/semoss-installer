@@ -12,10 +12,10 @@ if %eclipseLoc% == null (
 start %eclipseLoc%\eclipse.exe -data %workspacePath%
 
 :: Start server
-echo server starts successfully, but that isn't reflected in eclipse.
+::echo server starts successfully, but that isn't reflected in eclipse.
 
-cd %workspacePath%\%Tomcat_Version%\bin
-startup.bat
+::cd %workspacePath%\%Tomcat_Version%\bin
+::startup.bat
 
 :: Timeout for the server starting 
 timeout /t 60 /nobreak
