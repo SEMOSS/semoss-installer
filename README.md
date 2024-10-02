@@ -5,7 +5,11 @@
 Hello and welcome to the SEMOSS project. We have a few important steps for you to take to initialize the process of downloading SEMOSS. It is a lengthy process, and the goal is for you to be able to set a few parameters and download a few items, and then step away while our automation process does the rest. If you are downloading for the first time, this process could take anywhere from 30 minutes to an hour*. Do not be alarmed if your first installation process takes up your entire day. 
  
 For returning SEMOSS users who need to download specific things, please see the properties file section. 
- 
+
+## Installing the Automation Script
+
+In order to get started, you need to download this script onto your machine. Select the green "Code" button and select the "Download Zip" option. Unzip the file into your downloads folder. Access the unzipped folder, and navigate through until you see the file called `master.properties`. Keep this file open and ready to edit as you follow the instructions below. 
+
 ## JDK 
  
 First things first, we need you to download a Java SE Development Kit (JDK). Through this link: [Oracle JDK Downloads](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) you can scroll down to find set, Windows x64 for 64 bit. Accept the license agreement and download. You will need to create an Oracle account using your Deloitte email address (if you do not receive an email confirmation within 10-15 minutes, contact a training team member, who will provide a backup email). Select next all the way through; it will go to your Program Files but you won't have to direct it there (if you run into any issues, right click the download and choose "Run as Administrator"). 
@@ -38,10 +42,13 @@ As a first time SEMOSS installer, you will need to install all the bells and whi
 
 Returning SEMOSS installers have the option to play around with these flags. If you already have the correct versions of software on your machine, you may set the "softwareInstall" flag to false. If you need a few to be updated, set it to true and further specify which software you need. 
 
+## Master.bat
+
+In the same location as your properties file, there is a file called `master.bat`. At this point in the instruction, you are ready to run it. Double click on the file and the process should begin. 
 
 ## VS Installer
 
-VS Installer is something that all new SEMOSS developers need to install. There are a few “user inputs” required to complete the installation. VS Installer should automatically run and open up VS Build Tools. You should be greeted with a screen that looks like this:
+VS Installer is something that all new SEMOSS developers need to install. There are a few “user inputs” required to complete the installation. As the `master.bat` file runs this software will install, so be patient for it to open. VS Installer will automatically run and open up VS Build Tools. You will be greeted with a screen that looks like this:
 
 ![image](https://github.com/user-attachments/assets/a07d5266-98f0-4eab-9b5d-23a65d8e20de)
 
