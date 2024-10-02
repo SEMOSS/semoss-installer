@@ -12,3 +12,13 @@ if not exist "%workspacePath%\%Tomcat_Version%\webapps" (
 ) else (
     start "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN /W "%dir%\scripts\cloneScripts\semossWebClone.bat"
 )
+set filepath="%workspacePath%\%Tomcat_Version%\webapps\SemossWeb\.env.local"
+echo ENDPOINT=../../.. > %filepath%
+echo MODULE=/Monolith >> %filepath%
+echo. >> %filepath%
+echo THEME_TITLE=SEMOSS >> %filepath%
+echo THEME_FAVICON=./src/assets/favicon.svg >> %filepath%
+echo. >> %filepath%
+echo NODE_ENV=development >> %filepath%
+
+exit
