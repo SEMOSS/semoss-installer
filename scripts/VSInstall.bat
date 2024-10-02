@@ -9,8 +9,8 @@ if not exist %VS_Path% (
 
     echo .
     echo Check the "Desktop development with C++" box. 
-    echo On the right side there will be an "Installation details" section. Make sure to select each checkbox under the Optional section. Download and install the selection.
-    pause
+    echo On the right side there will be an "Installation details" section. Make sure to select each checkbox under the Optional section. Download and install the selection
+    
 ) else (
     echo Visual Studio 2019 is already installed.
     echo .
@@ -18,8 +18,7 @@ if not exist %VS_Path% (
     echo .
     echo You should see a box for "Visual Studio Build Tools 2019", click the "Modify" button on the right side. 
     echo Check the "Desktop development with C++" box. 
-    echo On the right side there will be an "Installation details" section. Make sure to select each checkbox under the Optional section. Download and install the selection.
-    pause
+    echo On the right side there will be an "Installation details" section. Make sure to select each checkbox under the Optional section. Download and install the selection
 
     start C:\"Program Files (x86)"\"Microsoft Visual Studio"\Installer\setup.exe
 )
