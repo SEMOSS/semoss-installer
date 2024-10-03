@@ -44,7 +44,7 @@ Returning SEMOSS installers have the option to play around with these flags. If 
 
 ## Master.bat
 
-In the same location as your properties file, there is a file called `master.bat`. At this point in the instruction, you are ready to run it. Double click on the file and the process should begin. 
+In the same location as your properties file, there is a file called `master.bat`. At this point in the instruction, you are ready to run it. Double click on the file and the process should begin. You should expect to see many different command prompt windows opening up.
 
 ## VS Installer
 
