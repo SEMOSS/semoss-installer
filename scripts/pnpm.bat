@@ -2,17 +2,11 @@
 Setlocal EnableDelayedExpansion
 
 cd "%workspacePath%"\%Tomcat_Version%\webapps\SemossWeb
+call npm install -g pnpm
+call pnpm install
+call pnpm run build
 
-@REM if %npmFlag%==true (
-    npm install -g pnpm
-@REM )
-@REM if %pnpmFlag%==true (
-    pnpm install
-@REM )
-
-pnpm run build
-
-cd packages\ui
-pnpm run build
+cd .\packages\ui
+call pnpm run build
 
 cd %dir%
