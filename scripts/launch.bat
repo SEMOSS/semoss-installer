@@ -11,6 +11,7 @@ if %eclipseLoc% == null (
 
 start %eclipseLoc%\eclipse.exe -data %workspacePath%
 
+echo Please start the server yourself through eclipse.
 :: Start server
 ::echo server starts successfully, but that isn't reflected in eclipse.
 
