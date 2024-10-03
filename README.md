@@ -48,7 +48,10 @@ In the same location as your properties file, there is a file called `master.bat
 
 ## VS Installer
 
-VS Installer is something that all new SEMOSS developers need to install. There are a few “user inputs” required to complete the installation. As the `master.bat` file runs this software will install, so be patient for it to open. VS Installer will automatically run and open up VS Build Tools. You will be greeted with a screen that looks like this:
+VS Installer is something that all new SEMOSS developers need to install. There are a few “user inputs” required to complete the installation. As the `master.bat` file runs this software will install, so be patient for it to open. Find the command prompt window that looks like this: 
+<img width="857" alt="image" src="https://github.com/user-attachments/assets/c15873ae-556e-4d49-8330-3e646a705d47">
+
+Click any button in this window. VS Installer will automatically run and open up VS Build Tools. You will be greeted with a screen that looks like this:
 
 ![image](https://github.com/user-attachments/assets/a07d5266-98f0-4eab-9b5d-23a65d8e20de)
 
