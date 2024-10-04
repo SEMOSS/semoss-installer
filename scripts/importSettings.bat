@@ -7,3 +7,7 @@ robocopy "%cd%\scripts\settingsDirs\.settingsMonolith" "%workspacePath%\Monolith
 ::Copy into Semoss
 mkdir %workspacePath%\Semoss\.settings
 robocopy "%cd%\scripts\settingsDirs\.settingsSemoss" "%workspacePath%\Semoss\.settings" /mir
+
+::Copy into Servers
+mkdir %workspacePath%\Servers\.settings
+robocopy "%cd%\scripts\settingsDirs\.settingsServers" "%workspacePath%\Servers\.settings" /mir
