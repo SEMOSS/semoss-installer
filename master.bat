@@ -28,6 +28,7 @@ start "clone.bat" /d ".\scripts" /B /W "clone.bat" >> logs/clone.log 2>&1
 
 call .\scripts\classpath.bat
 call .\scripts\classpathSemoss.bat
+call .\scripts\importSettings.bat
 call .\scripts\CheckRDF_Map.bat
 call .\scripts\socialProperties_Update.bat
 call .\scripts\server.bat
