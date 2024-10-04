@@ -32,7 +32,7 @@ timeout /t 60 /nobreak
 
 :: Attempt to close Eclipse using taskkill
 echo Attempting to close Eclipse...
-taskkill /IM eclipse.exe /F >>output.txt
+taskkill /IM eclipse.exe /F
 
 :: Continue with the rest of the batch script
 echo Eclipse has been closed. Continuing with the script...
