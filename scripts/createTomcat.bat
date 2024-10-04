@@ -61,7 +61,7 @@ set xmlFile=%workspacePath%\.metadata\.plugins\org.eclipse.wst.server.core\serve
 (
     echo ^<?xml version="1.0" encoding="UTF-8" standalone="no"?^>
     echo ^<servers^>
-    echo ^<server auto-publish-setting="1" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" saveSeparateContextFiles="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="300" stop-timeout="15" testEnvironment="false" timestamp="2"^>
+    echo ^<server auto-publish-setting="1" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" saveSeparateContextFiles="false" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="300" stop-timeout="15" testEnvironment="false" timestamp="2"^>
     echo ^<list key="modules" value0="Monolith::org.eclipse.jst.jee.server:Monolith::jst.web::4.0"/^>
     echo ^</server^>
     echo ^</servers^>
