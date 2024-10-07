@@ -22,6 +22,6 @@ echo Please start the server yourself through eclipse.
 timeout /t 60 /nobreak
 
 :: Load up the SEMOSS web
-start http://localhost:9090/SemossWeb/#!/
+::start http://localhost:9090/SemossWeb/#!/
 
 cd %dir%
