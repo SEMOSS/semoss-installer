@@ -69,8 +69,6 @@ At this point, the rest of the installation should be done automatically. Once t
 
 - Starting the server yourself: At the bottom of Eclipse, next to the Console tab, you should see a tab labeled “Servers”.  Right click on Tomcat and select the “Start” button. Give your server a few minutes to start. You can watch the console’s output as your server starts to view the progress. Once your server has been started, go to this website to start using SEMOSS. [SEMOSS](http://localhost:9090/SemossWeb/#!/)
 
-![image](https://github.com/user-attachments/assets/5a7e266a-a7bd-4681-a13e-0e8500bf07aa)
-
- - If the server is started through the batch file: The server should start on it’s own and the SEMOSS website should be opened. If you do not see SEMOSS web UI, try refreshing the page.
-
 ![image](https://github.com/user-attachments/assets/89d5bc0a-6094-406a-a2e2-7cb005a4e274)
+
+![image](https://github.com/user-attachments/assets/5a7e266a-a7bd-4681-a13e-0e8500bf07aa)
