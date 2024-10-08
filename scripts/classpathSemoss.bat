@@ -79,7 +79,7 @@ echo     ^<linkedResources^>
 echo         ^<link^>
 echo             ^<name^>MonolithSrc^</name^>
 echo             ^<type^>2^</type^>
-echo             ^<location^>C:/workspace/Monolith/src^</location^>
+echo             ^<location^>%temp%/Monolith/src^</location^>
 echo         ^</link^>
 echo     ^</linkedResources^>
 echo ^</projectDescription^>
