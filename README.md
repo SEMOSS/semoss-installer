@@ -42,6 +42,15 @@ As a first time SEMOSS installer, you will need to install all the bells and whi
 
 Returning SEMOSS installers have the option to play around with these flags. If you already have the correct versions of software on your machine, you may set the "softwareInstall" flag to false. If you need a few to be updated, set it to true and further specify which software you need. 
 
+### Tomcat Version
+
+If you are not a firt stime installer, you may have a different tomcat version. The default setting in master.properties is
+```
+Tomcat_Version=apache-tomcat-9.0.95
+```
+Check your workspace directory and change this variable as needed. For example, if I have the folder apache-tomcat-9.0.93, I would change the properties variable to that.
+
+
 ## Master.bat
 
 In the same location as your properties file, there is a file called `master.bat`. At this point in the instruction, you are ready to run it. Double click on the file and the process should begin. You should expect to see many different command prompt windows opening up.
