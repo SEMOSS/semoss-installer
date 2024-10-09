@@ -46,7 +46,7 @@ Returning SEMOSS installers have the option to play around with these flags. If 
 
 If you are not a firt stime installer, you may have a different tomcat version. The default setting in master.properties is
 ```
-Tomcat_Version=apache-tomcat-9.0.95
+Tomcat_Version=apache-tomcat-9.0.96
 ```
 Check your workspace directory and change this variable as needed. For example, if I have the folder apache-tomcat-9.0.93, I would change the properties variable to that.
 
