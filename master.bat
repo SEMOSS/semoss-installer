@@ -27,7 +27,7 @@ start "Download_Software.bat" /d ".\scripts" /W "Download_Software.bat" >> logs/
 start "clone.bat" /d ".\scripts" /B /W "clone.bat" >> logs/clone.log 2>&1
 
 call .\scripts\pnpm.bat
-call .\scripts\buildPath.bat
+call .\scripts\buildProjectPath.bat
 call .\scripts\importSettings.bat
 call .\scripts\CheckRDF_Map.bat
 call .\scripts\socialProperties_Update.bat
