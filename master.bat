@@ -35,8 +35,6 @@ call .\scripts\server.bat
 call .\scripts\WebXml.bat
 call .\scripts\createTomcat.bat
 
-pause
-
 if %setEnvVariables%==true (
     call .\scripts\Environment_Variables.bat
     pause
@@ -45,8 +43,6 @@ if %setEnvVariables%==true (
 start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
 call .\scripts\catalina.bat
 start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
-
-pause
 
 if %rInstall%==true (
     call .\scripts\R_Install.bat
