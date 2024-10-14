@@ -17,8 +17,9 @@ First things first, we need you to download a Java SE Development Kit (JDK). Thr
 ## Properties File 
  
 For our automation to know exactly what you want to download and where you want to download it to, we need you to edit the properties file. This file is called `master.properties`. The purpose of this file is to flag certain software as true or false. A true marker means that the software will be installed, false means that it won’t be installed. The individual software flags only work if _**softwareInstall**_ is true. 
+
 ### Workspace Path
-For a first time SEMOSS installer, you are going to need to make some changes to the properties file. you can also choose to set your path variable. This is where your workspace within Eclipse would be located. First time installers usually want their workspace in their C drive. We recommend it to look like this: 
+For a first time SEMOSS installer, you are going to need to make some changes to the properties file. you can also choose to set your path variable. This is where your workspace within Eclipse would be located. Any installer needs to put their workspace in their C drive. We recommend it to look like this: 
 
 ![image](https://github.com/user-attachments/assets/9a7d394a-40f6-4f9c-8ced-eabef0972045)
 
