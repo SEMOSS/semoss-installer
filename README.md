@@ -72,18 +72,21 @@ Check the box that says ”Desktop Development with C++”. On the right side th
 
 ## Last Steps
 
-At this point, the rest of the installation should be done automatically. Once the process is complete, Eclipse should be launched for you.  
+At this point, the rest of the installation should be done automatically. Once the process is complete, Eclipse should be launched for you. Be mindful of the fact that Eclipse will launch once early on in the process, it will close itself after 60 seconds, and you must wait until the final launch to start your server.
 
 ### Starting your Server
 
 - Please wait until your workspace has finished building to start your server. You can check the progress of your workspace at the bottom right of Eclipse.
 
+![image](https://github.com/user-attachments/assets/60e6cb68-642b-443f-a2dc-2e9f74d5f186)
 
 - Starting the server yourself: At the bottom of Eclipse, next to the Console tab, you should see a tab labeled “Servers”.  Right click on Tomcat and select the “Start” button. Give your server a few minutes to start. You can watch the console’s output as your server starts to view the progress. Once your server has been started, go to this website to start using SEMOSS. [SEMOSS](http://localhost:9090/SemossWeb/#!/)
 
 ![image](https://github.com/user-attachments/assets/89d5bc0a-6094-406a-a2e2-7cb005a4e274)
 
 First time SEMOSS installers will be greeted with this page:
+
+![image](https://github.com/user-attachments/assets/22684aff-621d-45ef-a401-2893629b01f5)
 
 Create your login credentials. When you run your server again you should be greeted with this page:
 
