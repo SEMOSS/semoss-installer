@@ -228,12 +228,15 @@ if exist "%server_settings%" (
     )
 ) else (
     echo File does not exist: %server_settings%
+    
+    set "tempPath=%workspacePath%"
+    set "tempPath=!tempPath:\=/!"
 
-        (
-            echo eclipse.preferences.version=1
-            echo module-start-timeout=300000
-            echo runtimes=^<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?^>\r\n^<runtimes^>\r\n  ^<runtime id\="Apache Tomcat v9.0" location\="%workspaceName%/%Tomcat_Version%" name\="Apache Tomcat v9.0" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.90" timestamp\="0"/^>\r\n^</runtimes^>\r\n
-        ) > "%server_settings%"
+    (
+        echo eclipse.preferences.version=1
+        echo module-start-timeout=300000
+        echo runtimes=^<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?^>\r\n^<runtimes^>\r\n  ^<runtime id\="Apache Tomcat v9.0" location\="!tempPath!/%Tomcat_Version%" name\="Apache Tomcat v9.0" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.90" timestamp\="0"/^>\r\n^</runtimes^>\r\n
+    ) > "%server_settings%"
     echo ... org.eclipse.wst.server.discovery.prefs file created
 )
 
