@@ -23,7 +23,7 @@ For a first time SEMOSS installer, you are going to need to make some changes to
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/433bc2a7-ef5b-4afd-9db5-ba06494bc5e6">
 
-**Be mindful of the direction of the back and forward slashes!** The script will automatically make your workspace for you once you fill in this value. If you are creating a different workspace to play around in, pick whatever path you’d like. 
+The script will automatically make your workspace for you once you fill in this value. If you are creating a different workspace to play around in, pick whatever path you’d like. 
 
 ### EclipseLoc
 
