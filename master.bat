@@ -37,7 +37,6 @@ call .\scripts\createTomcat.bat
 
 if %setEnvVariables%==true (
     call .\scripts\Environment_Variables.bat
-    pause
 )
 
 start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
