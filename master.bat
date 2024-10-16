@@ -21,10 +21,10 @@ call > logs/download_software.log
 call > logs/clone.log
 call > logs/maven.log
 
-::start "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
-::start "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
-::start "Download_Software.bat" /d ".\scripts" /W "Download_Software.bat" >> logs/download_software.log 2>&1
-::start "clone.bat" /d ".\scripts" /B /W "clone.bat" >> logs/clone.log 2>&1
+start "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
+start "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
+start "Download_Software.bat" /d ".\scripts" /W "Download_Software.bat" >> logs/download_software.log 2>&1
+start "clone.bat" /d ".\scripts" /B /W "clone.bat" >> logs/clone.log 2>&1
 
 call .\scripts\pnpm.bat
 call .\scripts\buildProjectPath.bat
