@@ -54,6 +54,6 @@ if %pyenvInstall%==true (
     call .\scripts\pyenv\pyenv_scoop.bat
 )
 
-::call .\scripts\pythonlibs.bat
+call .\scripts\pythonlibs.bat
 call .\scripts\semoss_Update.bat
 call .\scripts\launch.bat
