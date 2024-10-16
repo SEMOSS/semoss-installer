@@ -11,7 +11,7 @@ if %errorlevel% neq 0 (
     echo Error: Failed to unzip the file.
     exit /b 1
 )
-echo Eclipse has ben unZipped to Desktop!
+echo Eclipse has been unZipped to Desktop!
 
 endlocal
 exit
