@@ -21,39 +21,39 @@ call > logs/download_software.log
 call > logs/clone.log
 call > logs/maven.log
 
-@REM start "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
-@REM start "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
-@REM start "Download_Software.bat" /d ".\scripts" /W "Download_Software.bat" >> logs/download_software.log 2>&1
-@REM start "clone.bat" /d ".\scripts" /B /W "clone.bat" >> logs/clone.log 2>&1
+start "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
+start "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
+start "Download_Software.bat" /d ".\scripts" /W "Download_Software.bat" >> logs/download_software.log 2>&1
+start "clone.bat" /d ".\scripts" /B /W "clone.bat" >> logs/clone.log 2>&1
 
-@REM call .\scripts\pnpm.bat
-@REM call .\scripts\buildProjectPath.bat
-@REM call .\scripts\importSettings.bat
-@REM call .\scripts\CheckRDF_Map.bat
-@REM call .\scripts\socialProperties_Update.bat
-@REM call .\scripts\server.bat
-@REM call .\scripts\WebXml.bat
-@REM call .\scripts\createTomcat.bat
+call .\scripts\pnpm.bat
+call .\scripts\buildProjectPath.bat
+call .\scripts\importSettings.bat
+call .\scripts\CheckRDF_Map.bat
+call .\scripts\socialProperties_Update.bat
+call .\scripts\server.bat
+call .\scripts\WebXml.bat
+call .\scripts\createTomcat.bat
 
-@REM if %setEnvVariables%==true (
-@REM     call .\scripts\Environment_Variables.bat
-@REM )
+if %setEnvVariables%==true (
+    call .\scripts\Environment_Variables.bat
+)
 
-@REM start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
-@REM call .\scripts\catalina.bat
-@REM start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
+start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
+call .\scripts\catalina.bat
+start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
 
-@REM if %rInstall%==true (
-@REM     call .\scripts\R_Install.bat
-@REM     pause
-@REM )
+if %rInstall%==true (
+    call .\scripts\R_Install.bat
+    pause
+)
 
-@REM if %pyenvInstall%==true (
-@REM     call .\scripts\pyenv\pyenv_install.bat
-@REM     call .\scripts\pyenv\pyenv_env.bat
-@REM     call .\scripts\pyenv\pyenv_scoop.bat
-@REM )
+if %pyenvInstall%==true (
+    call .\scripts\pyenv\pyenv_install.bat
+    call .\scripts\pyenv\pyenv_env.bat
+    call .\scripts\pyenv\pyenv_scoop.bat
+)
 
 call .\scripts\pythonlibs.bat
-@REM call .\scripts\semoss_Update.bat
-@REM call .\scripts\launch.bat
+call .\scripts\semoss_Update.bat
+call .\scripts\launch.bat
