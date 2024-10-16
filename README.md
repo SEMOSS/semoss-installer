@@ -21,7 +21,8 @@ For our automation to know exactly what you want to download and where you want 
 ### Workspace Path
 For a first time SEMOSS installer, you are going to need to make some changes to the properties file. you can also choose to set your path variable. This is where your workspace within Eclipse would be located. Any installer needs to put their workspace in their C drive. We recommend it to look like this: 
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/433bc2a7-ef5b-4afd-9db5-ba06494bc5e6">
+<img width="262" alt="image" src="https://github.com/user-attachments/assets/1444fae8-53cc-41be-b994-dec8c287f2d4">
+
 
 The script will automatically make your workspace for you once you fill in this value. If you are creating a different workspace to play around in, pick whatever path you’d like. 
 
