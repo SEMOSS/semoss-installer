@@ -43,6 +43,13 @@ As a first time SEMOSS installer, you will need to install all the bells and whi
 
 Returning SEMOSS installers have the option to play around with these flags. If you already have the correct versions of software on your machine, you may set the "softwareInstall" flag to false. If you need a few to be updated, set it to true and further specify which software you need. 
 
+### GPU
+
+If you have a GPU, change the following flag in master.properties:
+```
+haveGPU=false
+```
+
 ### Tomcat Version
 
 If you are not a firt stime installer, you may have a different tomcat version. The default setting in master.properties is
