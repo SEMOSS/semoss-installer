@@ -1,7 +1,5 @@
 @echo off
 
-Tomcat_Version=apache-tomcat-9.0.96
-
 curl -o %UserProfile%\Downloads\%Tomcat_Version%-windows-x64.zip %Tomcat_Download%
 tar -zxvf %UserProfile%\Downloads\%Tomcat_Version%-windows-x64.zip --directory "%workspacePath%"
 
