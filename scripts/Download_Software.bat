@@ -19,7 +19,7 @@ if %softawareInstall%==true (
     )
 
     if %notepadFlag%==true (
-        start "Notepad++ Download" /MIN ".\downloadScripts\notepadFlag.bat"
+        start "Notepad++ Download" /MIN ".\downloadScripts\notepad.bat"
         @REM start %UserProfile%\Downloads\npp.7.8.2.Installer.x64.exe
         @REM pause
     )
