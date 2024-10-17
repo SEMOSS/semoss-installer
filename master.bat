@@ -1,11 +1,16 @@
 @echo off
 Setlocal EnableDelayedExpansion
 
-net session
+:: Permission Check
+echo Detecting permissions...
+
+net session >nul 2>&1
 if %errorLevel% neq 0 (
-    echo Close the program and run again as administrator.
-    timeout /t 10
-    cancel
+    echo Administrative permissions required. Close the program and run again as administrator.
+    exit /B
+)
+else (
+    echo Success: Administrative permissions confirmed.
 )
 
 FOR /F "tokens=1,2 delims==" %%G IN (master.properties) DO (
