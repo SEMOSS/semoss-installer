@@ -14,6 +14,7 @@ if not exist %VS_Path% (
 
 ) else (
     echo Visual Studio 2019 is already installed.
+    echo If you have not set this up yet, follow the instructions below. If you have, continue on.
     start /MIN C:\"Program Files (x86)"\"Microsoft Visual Studio"\Installer\setup.exe
 )
 echo .
