@@ -8,8 +8,7 @@ net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo Administrative permissions required. Close the program and run again as administrator.
     exit /B
-)
-else (
+) else (
     echo Success: Administrative permissions confirmed.
 )
 
