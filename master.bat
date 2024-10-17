@@ -32,39 +32,57 @@ call > logs/download_software.log
 call > logs/clone.log
 call > logs/maven.log
 
+echo 1. Updating Settings
 start "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
+echo 2. Checking Visual Studio
 start /wait "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
+echo 3. Software Downloads
 start /wait "Download_Software.bat" /d ".\scripts" "Download_Software.bat" >> logs/download_software.log 2>&1
+echo 4. Cloning Repos
 start "Monolith Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\monoClone.bat"
 start "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN "%dir%\scripts\cloneScripts\semossWebClone.bat"
 start /wait "Semoss Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\semossClone.bat"
 
+echo 5. Checking Libraries
 if %rInstall%==true (
+    echo 5. -Installing R Libraries
     start .\scripts\R_Install.bat
 )
 if %pyenvInstall%==true (
+    echo 5. -Setting Up Python Environment
     start /wait .\scripts\pyenv\pyenv_install.bat
     start /wait .\scripts\pyenv\pyenv_env.bat
     start /wait .\scripts\pyenv\py-scoop.bat
 )
+echo 6. Installing Python Libraries
 start /wait .\scripts\pythonlibs.bat
-
+echo 7. Setting up PNPM
 call .\scripts\pnpm.bat
+echo 8. Building Project Path
 call .\scripts\buildProjectPath.bat
+echo 9. Importing Settings
 call .\scripts\importSettings.bat
+echo 10. Checking RDF_Map
 call .\scripts\CheckRDF_Map.bat
+echo 11. Updating social properties
 call .\scripts\socialProperties_Update.bat
+echo 12. Setting up Tomcat
 call .\scripts\server.bat
+echo 13. Editing WebXml
 call .\scripts\WebXml.bat
+echo 14. Creating Tomcat
 call .\scripts\createTomcat.bat
 
+echo 15. Checking Environment Variables
 if %setEnvVariables%==true (
     call .\scripts\Environment_Variables.bat
 )
-
+echo 16. Maven Cleaning / Catalina
 start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
 call .\scripts\catalina.bat
 start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
 
+echo 17. Updating Semoss
 call .\scripts\semoss_Update.bat
+echo 18. Launching
 call .\scripts\launch.bat
