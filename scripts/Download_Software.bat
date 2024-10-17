@@ -1,9 +1,6 @@
 @echo off
 Setlocal EnableDelayedExpansion
 
-:: Downloads and unzips Tomcat
-start "Tomcat Download" /MIN ".\downloadScripts\tomcat.bat"
-
 :: Downloads files
 if %softawareInstall%==true (
 
@@ -35,5 +32,7 @@ if %softawareInstall%==true (
     )
 )
 
+:: Downloads and unzips Tomcat
+start "Tomcat Download" /MIN /W ".\downloadScripts\tomcat.bat"
 
 exit
