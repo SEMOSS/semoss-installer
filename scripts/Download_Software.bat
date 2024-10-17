@@ -8,7 +8,7 @@ start "Tomcat Download" /MIN ".\downloadScripts\tomcat.bat"
 if %softawareInstall%==true (
 
     if %eclipseFlag%==true (
-        call .\downloadScripts\eclipse.bat
+        start "eclipse Download" /MIN ".\downloadScripts\eclipse.bat"
         set "eclipseLoc=%UserProfile%\Desktop\eclipse"
     )
 
