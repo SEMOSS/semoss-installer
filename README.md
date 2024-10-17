@@ -61,7 +61,7 @@ Check your workspace directory and change this variable as needed. For example, 
 
 ## Master.bat
 
-In the same location as your properties file, there is a file called `master.bat`. At this point in the instruction, you are ready to run it. Double click on the file and the process should begin. You should expect to see many different command prompt windows opening up.
+In the same location as your properties file, there is a file called `master.bat`. At this point in the instruction, you are ready to run it. Right click on `master.bat` and select **Run as Administrator**. This is essential for the automation process to execute correctly. You should expect to see many different command prompt windows opening up.
 
 ## VS Installer
 
