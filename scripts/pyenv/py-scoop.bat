@@ -32,3 +32,4 @@ timeout /t 5
 start powershell -NoExit -Command "& {pipx ensurepath;exit;}"
 
 endlocal
+exit
