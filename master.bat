@@ -5,7 +5,7 @@ net session
 if %errorLevel% neq 0 (
     echo Close the program and run again as administrator.
     timeout /t 10
-    cancel
+    exit
 )
 
 FOR /F "tokens=1,2 delims==" %%G IN (master.properties) DO (
