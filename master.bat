@@ -39,8 +39,8 @@ start /wait "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.l
 echo 3. Software Downloads
 start /wait "Download_Software.bat" /d ".\scripts" "Download_Software.bat" >> logs/download_software.log 2>&1
 echo 4. Cloning Repos
-start "Monolith Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\monoClone.bat"
-start "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN "%dir%\scripts\cloneScripts\semossWebClone.bat"
+start /wait "Monolith Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\monoClone.bat"
+start /wait "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN "%dir%\scripts\cloneScripts\semossWebClone.bat"
 start /wait "Semoss Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\semossClone.bat"
 
 echo 5. Checking Libraries
