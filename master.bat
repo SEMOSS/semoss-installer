@@ -23,8 +23,20 @@ call > logs/maven.log
 
 start "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
 start "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
-start "Download_Software.bat" /d ".\scripts" /W "Download_Software.bat" >> logs/download_software.log 2>&1
-start "clone.bat" /d ".\scripts" /B /W "clone.bat" >> logs/clone.log 2>&1
+start /wait "Download_Software.bat" /d ".\scripts" "Download_Software.bat" >> logs/download_software.log 2>&1
+start "Monolith Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\monoClone.bat"
+start "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN "%dir%\scripts\cloneScripts\semossWebClone.bat"
+start /wait "Semoss Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\semossClone.bat"
+
+if %rInstall%==true (
+    start .\scripts\R_Install.bat
+)
+if %pyenvInstall%==true (
+    start /wait .\scripts\pyenv\pyenv_install.bat
+    start /wait .\scripts\pyenv\pyenv_env.bat
+    start /wait .\scripts\pyenv\pyenv_scoop.bat
+)
+start /wait .\scripts\pythonlibs.bat
 
 call .\scripts\pnpm.bat
 call .\scripts\buildProjectPath.bat
@@ -39,21 +51,9 @@ if %setEnvVariables%==true (
     call .\scripts\Environment_Variables.bat
 )
 
-start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
+start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
 call .\scripts\catalina.bat
-start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
+start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
 
-if %rInstall%==true (
-    call .\scripts\R_Install.bat
-    pause
-)
-
-if %pyenvInstall%==true (
-    call .\scripts\pyenv\pyenv_install.bat
-    call .\scripts\pyenv\pyenv_env.bat
-    call .\scripts\pyenv\pyenv_scoop.bat
-)
-
-call .\scripts\pythonlibs.bat
 call .\scripts\semoss_Update.bat
 call .\scripts\launch.bat
