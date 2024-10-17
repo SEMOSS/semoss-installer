@@ -42,9 +42,4 @@ if %eclipseLoc% == null (
     set /p "eclipseLoc=Path:"
 )
 
-start %eclipseLoc%\eclipse.exe -data %workspacePath%
-timeout /t 60 /nobreak
-echo Attempting to close Eclipse...
-taskkill /IM eclipse.exe /F
-
 exit
