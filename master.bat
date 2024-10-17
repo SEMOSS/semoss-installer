@@ -2,7 +2,7 @@
 Setlocal EnableDelayedExpansion
 
 net session
-if %errorLevel% != 0 (
+if %errorLevel% neq 0 (
     echo Close the program and run again as administrator.
     timeout /t 10
     cancel
