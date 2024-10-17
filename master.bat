@@ -34,7 +34,7 @@ if %rInstall%==true (
 if %pyenvInstall%==true (
     start /wait .\scripts\pyenv\pyenv_install.bat
     start /wait .\scripts\pyenv\pyenv_env.bat
-    start /wait .\scripts\pyenv\pyenv_scoop.bat
+    start /wait .\scripts\pyenv\py-scoop.bat
 )
 start /wait .\scripts\pythonlibs.bat
 
