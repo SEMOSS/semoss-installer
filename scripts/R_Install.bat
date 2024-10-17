@@ -18,9 +18,9 @@ if %setEnvVariables%==true (
     setx R_LIBS "%UserProfile%\Documents\R\win-library\4.2" /m
 
     :: Define paths to be added as literal strings
-    set "paths[1]=%R_HOME%\bin;"
+    set "paths[1]=%UserProfile%\Documents\R\%R_Version%;"
     set "paths[0]=%R_HOME%\bin\x64;"
-    set "paths[2]=%R_LIBS%;"
+    set "paths[2]=%UserProfile%\Documents\R\win-library\4.2;"
     set "paths[3]=%R_LIBS%\rJava\jri\x64;"
 
     set "addPaths[1]=%%R_HOME%%\bin;"
