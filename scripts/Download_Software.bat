@@ -33,6 +33,6 @@ if %softawareInstall%==true (
 )
 
 :: Downloads and unzips Tomcat
-start "Tomcat Download" /MIN /W ".\downloadScripts\tomcat.bat"
+start /wait "Tomcat Download" /MIN ".\downloadScripts\tomcat.bat"
 
 exit
