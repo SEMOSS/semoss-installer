@@ -8,20 +8,18 @@ if %eclipseLoc% == null (
     echo Enter the directory that contains the file eclipse.exe
     set /p "eclipseLoc=Path:"
 )
-
 start %eclipseLoc%\eclipse.exe -data %workspacePath%
+echo =================================================
+echo PLEASE START THE SERVER YOURSELF THROUGH ECLIPSE.
+echo =================================================
 
-echo Please start the server yourself through eclipse.
-:: Start server
-::echo server starts successfully, but that isn't reflected in eclipse.
+:: Run Frontend
+start cmd /k "cd /d %workspacePath%\%Tomcat_Version%\webapps\SemossWeb && pnpm run dev:client"
 
-::cd %workspacePath%\%Tomcat_Version%\bin
-::startup.bat
-
-:: Timeout for the server starting 
-timeout /t 60 /nobreak
+:: Wait for backend/frontend servers
+timeout /t 180 /nobreak
 
 :: Load up the SEMOSS web
-::start http://localhost:9090/SemossWeb/#!/
+start http://localhost:9090/SemossWeb/#!/
 
 cd %dir%
