@@ -51,9 +51,9 @@ if %setEnvVariables%==true (
     call .\scripts\Environment_Variables.bat
 )
 
-start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
+start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
 call .\scripts\catalina.bat
-start "Maven Clean & Install" /d ".\scripts" /B /W "maven.bat" >> logs/maven.log 2>&1
+start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
 
 call .\scripts\semoss_Update.bat
 call .\scripts\launch.bat
