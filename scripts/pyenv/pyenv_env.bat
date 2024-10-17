@@ -51,5 +51,6 @@ for %%i in (0 1) do (
 )
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /t REG_EXPAND_SZ /d "!current_path!" /f
+
 endlocal
 exit

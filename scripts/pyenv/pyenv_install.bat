@@ -5,3 +5,5 @@ start /wait powershell -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSign
 ::not exiting powershell to see what the output versions are, can change that in the future
 start powershell -Command "pyenv --version; pyenv install %PYTHON_VERSION%; pyenv global %PYTHON_VERSION%; pyenv version"
 
+endlocal
+exit
