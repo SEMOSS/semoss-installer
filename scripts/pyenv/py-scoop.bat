@@ -11,19 +11,20 @@ Setlocal EnableDelayedExpansion
 @REM start powershell -Command "scoop --version; pipx --version"
 
 :: Step 1: Open a new PowerShell terminal and run the commands to install Scoop
-start powershell -NoExit -Command "& {Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser;Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression;exit;}"
+start powershell -NoExit -Command "& {if (Get-Command scoop -ErrorAction SilentlyContinue) {echo 'Scoop is already installed.'} else {echo 'Scoop is not installed. Proceeding with installation.'; Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression; scoop install pipx; pipx ensurepath}; exit}"
 
 :: Wait for the PowerShell commands to complete
 timeout /t 5
 
 :: Step 2: Close the PowerShell terminal and open a new one to run 'scoop --version'
-start powershell -NoExit -Command "& {scoop --version;exit;}"
+::start powershell -NoExit -Command "& {scoop --version;exit;}"
 
 :: Wait for the PowerShell command to complete
 timeout /t 10
 
+:: Check if scoop is already installed
 :: Step 3: Install pipx with scoop
-start powershell -NoExit -Command "& {scoop install pipx;exit;}"
+start powershell -NoExit -Command "& {if (Get-Command scoop -ErrorAction SilentlyContinue) {echo 'Scoop is already installed.'} else {echo 'Scoop is not installed. Proceeding with installation.'; scoop install pipx; pipx ensurepath}; exit}"
 
 :: Wait for the PowerShell command to complete
 timeout /t 5
