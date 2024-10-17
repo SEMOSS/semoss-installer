@@ -20,4 +20,3 @@ if %errorlevel% neq 0 (
 echo Eclipse has been unZipped to Desktop!
 
 endlocal
-exit
