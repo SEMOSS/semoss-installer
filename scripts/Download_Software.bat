@@ -35,11 +35,5 @@ if %softawareInstall%==true (
     )
 )
 
-if %eclipseLoc% == null (
-    echo Failed to open eclipse.
-    echo The eclipse path variable, eclipseLoc, was not specified in the properties file.
-    echo Enter the directory that contains the file eclipse.exe
-    set /p "eclipseLoc=Path:"
-)
 
 exit
