@@ -18,13 +18,13 @@ if %setEnvVariables%==true (
     setx R_LIBS "%UserProfile%\Documents\R\win-library\4.2" /m
 
     :: Define paths to be added as literal strings
-    set "paths[1]=%UserProfile%\Documents\R\%R_Version%;"
-    set "paths[0]=%R_HOME%\bin\x64;"
+    set "paths[0]=%UserProfile%\Documents\R\%R_Version%;"
+    set "paths[1]=%UserProfile%\Documents\R\%R_Version%\bin\x64;"
     set "paths[2]=%UserProfile%\Documents\R\win-library\4.2;"
-    set "paths[3]=%R_LIBS%\rJava\jri\x64;"
+    set "paths[3]=%UserProfile%\Documents\R\win-library\4.2\rJava\jri\x64;"
 
-    set "addPaths[1]=%%R_HOME%%\bin;"
-    set "addPaths[0]=%%R_HOME%%\bin\x64;"
+    set "addPaths[0]=%%R_HOME%%\bin;"
+    set "addPaths[1]=%%R_HOME%%\bin\x64;"
     set "addPaths[2]=%%R_LIBS%%;"
     set "addPaths[3]=%%R_LIBS%%\rJava\jri\x64;"
 
@@ -54,3 +54,4 @@ if %setEnvVariables%==true (
 
 :: Installs R Packages
 "%UserProfile%\Documents\R\%R_Version%\bin\Rscript.exe" "%workspacePath%\Semoss\R\SemossConfigR\scripts\Packages.R"
+exit
