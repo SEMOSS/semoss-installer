@@ -1,6 +1,13 @@
 @echo off
 Setlocal EnableDelayedExpansion
 
+net session
+if %errorLevel% != 0 (
+    echo Close the program and run again as administrator.
+    timeout /t 10
+    cancel
+)
+
 FOR /F "tokens=1,2 delims==" %%G IN (master.properties) DO (
     set %%G=%%H
 )
