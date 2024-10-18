@@ -12,7 +12,7 @@ In order to get started, you need to download this script onto your machine. Sel
 
 ## JDK 
  
-First things first, we need you to download a Java SE Development Kit (JDK). Through this link: [Oracle JDK Downloads](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) you can scroll down to find set, Windows x64 for 64 bit. Accept the license agreement and download. You will need to create an Oracle account using your Deloitte email address (if you do not receive an email confirmation within 10-15 minutes, contact a training team member, who will provide a backup email). Select next all the way through; it will go to your Program Files but you won't have to direct it there (if you run into any issues, right click the download and choose "Run as Administrator"). 
+First things first, we need you to download a Java SE Development Kit (JDK). Through this link: [Oracle JDK Downloads](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) you can scroll down to find the version, 8u391 (CTRL+F to find it quickly) Windows x64 for 64 bit. Accept the license agreement and download. You will need to create an Oracle account using your Deloitte email address (if you do not receive an email confirmation within 10-15 minutes, contact a training team member, who will provide a backup email). Select next all the way through; it will go to your Program Files but you won't have to direct it there (if you run into any issues, right click the download and choose "Run as Administrator"). 
  
 ## Properties File 
  
