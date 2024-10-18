@@ -9,4 +9,5 @@ call pnpm run build
 cd .\packages\ui
 call pnpm run build
 
-cd %dir%
+endlocal
+exit
