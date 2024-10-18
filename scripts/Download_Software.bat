@@ -35,7 +35,7 @@ if %softawareInstall%==true (
         start "Maven Download" /MIN ".\downloadScripts\maven.bat"
     )
 
-   if %jdkFlag%==true (
+    if %jdkFlag%==true (
         echo -- Downloading JDK...
         call ".\downloadScripts\jdk.bat"
     )
