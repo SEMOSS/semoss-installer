@@ -11,9 +11,7 @@ if %eclipseLoc% == null (
 start %eclipseLoc%\eclipse.exe -data %workspacePath%
 echo ======================================================
 echo PLEASE START THE SERVER YOURSELF THROUGH ECLIPSE
-echo AFTER WORKSPACE BUILDS.
-echo .
-echo Bottom Servers Tab --> Arrow Button
+echo AFTER WORKSPACE BUILDS
 echo ======================================================
 
 :: Run Frontend
