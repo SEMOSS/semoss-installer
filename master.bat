@@ -40,6 +40,8 @@ echo 3. Software Downloads
 start /wait "Download_Software.bat" /d ".\scripts" "Download_Software.bat" >> logs/download_software.log 2>&1
 set "PATH=%ProgramFiles%\Git\cmd;%PATH%"
 git --version
+set "PATH=%ProgramFiles%\nodejs\;%PATH%"
+node --version
 echo 4. Cloning Repos
 start "Monolith Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\monoClone.bat"
 start "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN "%dir%\scripts\cloneScripts\semossWebClone.bat"

@@ -25,9 +25,7 @@ if %softawareInstall%==true (
 
     if %nodeFlag%==true (
         echo -- Downloading Node...
-        start "Node Download" /MIN ".\downloadScripts\node.bat"
-        @REM start %UserProfile%\Downloads\node-v18.16.0-x64.msi
-        @REM pause
+        start /wait "Node Download" /MIN ".\downloadScripts\node.bat"
     )
 
     if %mavenFlag%==true (
