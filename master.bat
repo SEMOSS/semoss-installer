@@ -80,9 +80,12 @@ if %setEnvVariables%==true (
     call .\scripts\Environment_Variables.bat
 )
 echo 16. Maven Cleaning / Catalina
-start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
+echo -- Cleaning...
+start /MIN /wait "Maven Clean & Install" /d ".\scripts" "maven.bat" >> logs/maven.log 2>&1
+-- Tomcat Catalina Setup...
 call .\scripts\catalina.bat
-start /wait "Maven Clean & Install" /d ".\scripts" /B "maven.bat" >> logs/maven.log 2>&1
+echo -- Cleaning...
+start /MIN /wait "Maven Clean & Install" /d ".\scripts" "maven.bat" >> logs/maven.log 2>&1
 
 echo 17. Updating Semoss
 call .\scripts\semoss_Update.bat
