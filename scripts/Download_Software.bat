@@ -30,6 +30,10 @@ if %softawareInstall%==true (
     if %mavenFlag%==true (
         start "Maven Download" /MIN ".\downloadScripts\maven.bat"
     )
+
+   if %jdkFlag%==true (
+        call ".\downloadScripts\jdk.bat"
+    )
 )
 
 :: Downloads and unzips Tomcat
