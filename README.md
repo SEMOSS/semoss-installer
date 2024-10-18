@@ -37,9 +37,10 @@ If you already have the correct version of Eclipse on your machine and are runni
 
 ### Setting Your Flags
 
-As a first time SEMOSS installer, you will need to install all the bells and whistles. All of your flags should be set to "true". See the image below and ensure that your properties file matches it. 
+As a first time SEMOSS installer, you will need to install all the bells and whistles. See the image below and ensure that your properties file matches it. There are specific instructions below for the "haveGPU" flag. 
 
-![image](https://github.com/user-attachments/assets/e9bf8464-6707-4a0e-9b23-8c4fcaec0bb4)
+<img width="574" alt="image" src="https://github.com/user-attachments/assets/ac3a8db7-2103-4649-af61-bcfb705bf759">
+
 
 Returning SEMOSS installers have the option to play around with these flags. If you already have the correct versions of software on your machine, you may set the "softwareInstall" flag to false. If you need a few to be updated, set it to true and further specify which software you need. 
 
