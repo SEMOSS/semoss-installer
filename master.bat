@@ -33,14 +33,14 @@ call > logs/clone.log
 call > logs/maven.log
 
 echo 1. Updating Settings
-start "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
+start /wait "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
 echo 2. Checking Visual Studio
 start /wait "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
 echo 3. Software Downloads
 start /wait "Download_Software.bat" /d ".\scripts" "Download_Software.bat" >> logs/download_software.log 2>&1
 echo 4. Cloning Repos
-start /wait "Monolith Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\monoClone.bat"
-start /wait "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN "%dir%\scripts\cloneScripts\semossWebClone.bat"
+start "Monolith Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\monoClone.bat"
+start "SemossWeb Clone" /d "%workspacePath%\%Tomcat_Version%\webapps" /MIN "%dir%\scripts\cloneScripts\semossWebClone.bat"
 start /wait "Semoss Clone" /d "%workspacePath%" /MIN "%dir%\scripts\cloneScripts\semossClone.bat"
 
 echo 5. Checking Libraries

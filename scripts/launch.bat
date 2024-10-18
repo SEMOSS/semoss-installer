@@ -9,9 +9,12 @@ if %eclipseLoc% == null (
     set /p "eclipseLoc=Path:"
 )
 start %eclipseLoc%\eclipse.exe -data %workspacePath%
-echo =================================================
-echo PLEASE START THE SERVER YOURSELF THROUGH ECLIPSE.
-echo =================================================
+echo ======================================================
+echo PLEASE START THE SERVER YOURSELF THROUGH ECLIPSE
+echo AFTER WORKSPACE BUILDS.
+echo .
+echo Bottom Servers Tab --> Arrow Button
+echo ======================================================
 
 :: Run Frontend
 start cmd /k "cd /d %workspacePath%\%Tomcat_Version%\webapps\SemossWeb && pnpm run dev:client"
