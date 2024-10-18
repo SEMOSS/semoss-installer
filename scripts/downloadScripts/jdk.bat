@@ -17,5 +17,5 @@ if not exist "%javaFolder%" (
 echo Unzipping jdk ...
 tar -xf "%zipPath%" -C "%JavaFolder%"
 
-pause
 endlocal
+exit
