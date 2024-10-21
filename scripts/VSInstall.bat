@@ -7,10 +7,11 @@ if not exist %VS_Path% (
         echo Downloading Visual Studio 2019
         curl -o %UserProfile%\Downloads\vs_BuildTools.exe %VS_Download%
         start /MIN %UserProfile%\Downloads\vs_BuildTools.exe
-    ) else (
-        echo Visual Studio 2019 not found. Please change vsFlag to true in properties and try again.
-        pause
-    )
+    ) 
+    @REM else (
+    @REM     echo Visual Studio 2019 not found. Please change vsFlag to true in properties and try again.
+    @REM     pause
+    @REM )
 
 ) else (
     echo Visual Studio 2019 is already installed.

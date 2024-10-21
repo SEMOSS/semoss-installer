@@ -35,7 +35,9 @@ call > logs/maven.log
 echo 1. Updating Settings
 start /wait "Settings.bat" /d ".\scripts" /MIN "Settings.bat" >> logs/settings.log 2>&1
 echo 2. Checking Visual Studio
-start /wait "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
+if %vsFlag%==true (
+    start /wait "VS_Install.bat" /d ".\scripts" "VSInstall.bat" >> logs/vs_install.log 2>&1
+)
 echo 3. Software Downloads
 start /wait "Download_Software.bat" /d ".\scripts" "Download_Software.bat" >> logs/download_software.log 2>&1
 set "PATH=%ProgramFiles%\Git\cmd;%PATH%"
